@@ -1,0 +1,90 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Teacher Blog API",
+    "dateExported": "2023-05-24T12:00:00.000Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+      {
+        "name": "Get All Posts",
+        "url": "http://localhost:3000/posts",
+        "method": "GET",
+        "headers": [],
+        "body": {
+          "type": "json",
+          "raw": ""
+        }
+      },
+      {
+        "name": "Get Post by ID",
+        "url": "http://localhost:3000/posts/1",
+        "method": "GET",
+        "headers": [],
+        "body": {
+          "type": "json",
+          "raw": ""
+        }
+      },
+      {
+        "name": "Create New Post",
+        "url": "http://localhost:3000/posts",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "raw": "{\n  \"title\": \"New Post Title\",\n  \"author\": \"Test Author\",\n  \"content\": \"This is the content of the new post.\"\n}"
+        }
+      },
+      {
+        "name": "Update Post",
+        "url": "http://localhost:3000/posts/1",
+        "method": "PUT",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "raw": "{\n  \"title\": \"Updated Post Title\",\n  \"author\": \"Updated Author\",\n  \"content\": \"This is the updated content of the post.\"\n}"
+        }
+      },
+      {
+        "name": "Delete Post",
+        "url": "http://localhost:3000/posts/1",
+        "method": "DELETE",
+        "headers": [],
+        "body": {
+          "type": "json",
+          "raw": ""
+        }
+      },
+      {
+        "name": "Search Posts",
+        "url": "http://localhost:3000/posts/search?term=test",
+        "method": "GET",
+        "headers": [],
+        "body": {
+          "type": "json",
+          "raw": ""
+        }
+      },
+      {
+        "name": "Get Admin Posts",
+        "url": "http://localhost:3000/posts/admin",
+        "method": "GET",
+        "headers": [],
+        "body": {
+          "type": "json",
+          "raw": ""
+        }
+      }
+    ]
+  }
+  

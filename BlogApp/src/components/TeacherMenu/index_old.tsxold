@@ -1,0 +1,41 @@
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../types/navigation';
+import Button from '../Button';
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
+
+const TeacherMenu = () => {
+  const navigation = useNavigation<NavigationProp>();
+
+  return (
+    <View style={styles.container}>
+      <Button 
+        title="Adicionar nova postagem" 
+        onPress={() => navigation.navigate('NewPost')} 
+      />
+      <Button 
+        title="Gerenciar professores(as)" 
+        onPress={() => navigation.navigate('TeachersManagement')} 
+      />
+      <Button 
+        title="Gerenciar estudantes" 
+        onPress={() => navigation.navigate('ManageStudents')} 
+      />
+      <Button 
+        title="Ver todas postagens"
+        onPress={() => navigation.navigate('AllPosts')} 
+      />
+    </View>
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    padding: 16,
+    gap: 10
+  }
+});
+
+export default TeacherMenu;
